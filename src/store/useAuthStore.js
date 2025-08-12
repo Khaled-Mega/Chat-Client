@@ -25,8 +25,8 @@ export const useAuthStore = create((set) => ({
   },
   signUp: async (info) => {
     try {
-      const res = await axios.post(
-        "https://2a1afbed-b0f1-4863-b059-6f2d67e34978-00-1h9lnnoahpges.picard.replit.dev:8000/api/auth/signup",
+      const res = await axiosInstance.post(
+        "/auth/signup",
         info,
       );
       set({ authUser: res.data, isSignedIn: true });

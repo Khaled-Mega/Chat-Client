@@ -9,16 +9,18 @@ export default function Sidebar() {
 
   return (
     <div>
-      <div className="flex items-center gap-2">
-        <FiUsers className="text-primary" />
-        <span className="text-primary">Contacts</span>
-      </div>
+      <div className="w-full">
+        <div className="flex items-center gap-2">
+          <FiUsers className="text-primary" />
+          <span className="text-primary">Contacts</span>
+        </div>
 
-      <div className="mt-2">
-        <label className="flex items-center gap-2">
-          <input type="checkbox" />
-          <span>Show Online Only</span>
-        </label>
+        <div className="mt-2">
+          <label className="flex items-center gap-2">
+            <input type="checkbox" />
+            <span>Show Online Only</span>
+          </label>
+        </div>
       </div>
 
       <div className="mt-10 flex flex-col gap-4">
@@ -45,11 +47,9 @@ export default function Sidebar() {
               <button
                 key={user._id}
                 type="button"
-                className={
-                  selectedUser?._id === user._id
-                    ? "flex items-center gap-3 bg-base-300 relative z-[1000]"
-                    : "flex items-center gap-3 bg-red-500 relative z-[1000]"
-                }
+                className={`
+                  flex items-center gap-3 rounded-lg p-2 transition-all duration-300
+                  ${selectedUser?._id === user._id ? " bg-base-300" : ""}`}
                 onClick={() => {
                   console.log("Selected:", user.name);
                   setSelectedUser(user);

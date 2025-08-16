@@ -9,6 +9,6 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
   server: {
     host: "0.0.0.0",
-    allowedHosts:["4b702fb8-d4ff-4765-a2c4-7da2947bd7dd-00-3d5reuka2o4af.worf.replit.dev"]
+    allowedHosts:["49b14528-1a0a-46a2-a7b9-4c9e274b9a31-00-2i6k9zqaq15tg.kirk.replit.dev"]
   },
 });

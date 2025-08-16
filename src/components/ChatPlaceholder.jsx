@@ -2,7 +2,7 @@ import { MdChatBubbleOutline } from "react-icons/md";
 
 export default function ChatPlaceholder(){
     return (
-        <div className="flex justify-center items-center flex-col">
+        <div className="flex justify-center items-center flex-col h-full">
             <div className="animate-bounce bg-base-100 p-3 rounded-md">
             	<MdChatBubbleOutline className="size-5 text-primary"/>
             </div>
